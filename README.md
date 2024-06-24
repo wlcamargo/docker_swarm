@@ -79,7 +79,7 @@ sample:
 sample:
 ![image](assets/visualizer.png)
 
-### Escalando a aplicação
+### Escalando a aplicação (vai escalar para 10 replicas)
 ```
 docker service update --replicas=10 data-hackers-app_site
 ```
