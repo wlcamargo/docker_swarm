@@ -63,15 +63,30 @@ sample:
 ![image](assets/service.png)
 
 ### Serviços / Porta
+Para acessar os serviços expostos, basta clicar na porta. Em alguns casos o Playground não faz automaticamente, então será necessário clicar em ```OPEN PORT``` e expor manualmente.
 
-Site: 8003
+sample:
+![image](assets/ports.png)
 
-Visualizer: 8888
 
+#### Site: rodando na porta 8003
+
+sample:
+![image](assets/site.png)
+
+#### Visualizer: rodando na porta  8888
+
+sample:
+![image](assets/visualizer.png)
 
 ### Escalando a aplicação
 ```
 docker service update --replicas=10 data-hackers-app_site
+```
+
+### Remover um serviço
+```
+docker service rm app-data-hackers_site_site
 ```
 
 ## Developer
