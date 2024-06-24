@@ -7,7 +7,7 @@ Vamos simular uma orquestração com Docker Swarm no playgrond Docker.
 https://labs.play-with-docker.com/
 
 ### Crie 5 instâncias
-basta clicar em ``` ADD NEW INSTANCE```
+basta clicar em ```ADD NEW INSTANCE```
 
 sample:
 ![image](assets/instances.png)
@@ -17,9 +17,17 @@ sample:
 docker swarm init --advertise-addr <ip da instancia> 
 ```
 
-### Faça join das máquinas com o ip do Node Master
+### Faça join das máquinas com o token do node master
+sample:
+![image](assets/token.png)
 
-### Adicione um backup do Master
+Para copiar no playground, basta digitar:
+```control + insert```
+
+Para colar no Playground, basta digitar:
+```control + shift + v```
+
+### Adicione um backup do node master
 ```
 docker node promote node2
 ```
@@ -32,23 +40,27 @@ sample:
 
 ### Clone o repositorio
 ```
-git clone 
+git clone https://github.com/wlcamargo/docker_swarm
 ```
 
 ### Entre na pasta do projeto 
 ```
-cd 
+cd docker_swarm
 ```
 
-### Crie a aplicação no Swarm
+### Crie a stack orquestrada no Swarm
 ```
 docker stack deploy -c docker-compose.yml app-data-hackers_site
 ```
+sample:
+![image](assets/deploy.png)
 
 ### Verifique os serviços rodando no cluster
 ```
 docker service ls
 ```
+sample:
+![image](assets/service.png)
 
 ### Serviços / Porta
 
