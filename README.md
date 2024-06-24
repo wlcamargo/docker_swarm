@@ -24,7 +24,7 @@ sample:
 Para copiar no playground, basta digitar:
 ```control + insert```
 
-Para colar no Playground, basta digitar:
+Para colar no playground, basta digitar:
 ```control + shift + v```
 
 ### Adicione um backup do node master
