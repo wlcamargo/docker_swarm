@@ -42,7 +42,7 @@ cd
 
 ### Crie a aplicação no Swarm
 ```
-docker stack deploy -c docker-compose.yml data-hackers-app
+docker stack deploy -c docker-compose.yml app-data-hackers_site
 ```
 
 ### Verifique os serviços rodando no cluster
@@ -52,14 +52,14 @@ docker service ls
 
 ### Serviços / Porta
 
-Site: 8000
+Site: 8003
 
 Visualizer: 8888
 
 
 ### Escalando a aplicação
 ```
-docker service update --replicas=10 data-hackers-app_data-hackers-app
+docker service update --replicas=10 data-hackers-app_site
 ```
 
 ## Developer
